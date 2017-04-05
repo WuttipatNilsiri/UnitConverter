@@ -4,7 +4,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
-
+/**
+ * GUI class 
+ * @author ARZ
+ * 
+ */
 public class GUI {
 	JFrame frame;
 	JButton convert;
@@ -21,13 +25,17 @@ public class GUI {
 	private JComboBox leftcombo;
 	private JComboBox rightcombo;
 	UnitConverter unitConverter = UnitConverter.getUnitConverter();
-	
+	/**
+	 * initial GUI
+	 */
 	public GUI(){
 		frame = new JFrame("GUI frame");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		initComponents();
 	}
-
+	/**
+	 * initial Component
+	 */
 	private void initComponents() {
 		leftcombo = new JComboBox();
 		rightcombo = new JComboBox();
@@ -123,11 +131,16 @@ public class GUI {
 		frame.add(console,BorderLayout.SOUTH);		
 		frame.pack();
 	}
-	
+	/**
+	 * run gui
+	 */
 	public void run(){
 		frame.setVisible(true);
 	}
-	
+	/**
+	 * open gui
+	 * @param a
+	 */
 	public static void main(String[] a){
 		GUI gui = new GUI();
 		gui.run();

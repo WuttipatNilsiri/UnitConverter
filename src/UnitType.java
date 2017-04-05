@@ -9,6 +9,10 @@ public enum UnitType {
 	UnitType(Unit[] a){
 		this.a = a;
 	}
+	/**
+	 * get all units name
+	 * @return
+	 */
 	public Unit[] getUnits(){
 		return a;
 		
