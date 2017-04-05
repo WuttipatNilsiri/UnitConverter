@@ -21,7 +21,6 @@ public class GUI {
 	JTextField console;
 	JLabel eq;
 	JList<Unit> leftList;
-	boolean defualt = true;
 	private JComboBox leftcombo;
 	private JComboBox rightcombo;
 	UnitConverter unitConverter = UnitConverter.getUnitConverter();
@@ -83,10 +82,12 @@ public class GUI {
 				rightText.setForeground(Color.BLACK);
 				Unit unit1 = (Unit) leftcombo.getSelectedItem();
 				Unit unit2 = (Unit) rightcombo.getSelectedItem();
-				double testpara1 = 0;
-				double testpara2 = 0;
+				boolean defualt = true;
 				String left = leftText.getText();
 				String right = rightText.getText();
+				if (left.equals("")) {
+					defualt = false;
+				}
 				try{
 					Double.parseDouble(left);
 				}catch (NumberFormatException e){
